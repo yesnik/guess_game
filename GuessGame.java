@@ -5,6 +5,7 @@ import java.util.Random;
 class GuessGame {
 
     private static int maxGuessedNum = 15;
+    private static int triesLeft = 5;
 
     private static void printMessage(String message) {
         System.out.println(message);
@@ -15,7 +16,7 @@ class GuessGame {
             "Hello, I guessed number from 1 to " + maxGuessedNum + ". Try to guess it!"
         );
         int secretNum = new Random().nextInt(maxGuessedNum) + 1;
-        int triesLeft = 5;
+        
         while (true) {
             if (triesLeft < 1) {
                 printMessage("You've spent all tries. Game over. Sorry...");
