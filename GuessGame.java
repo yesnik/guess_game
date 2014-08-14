@@ -4,12 +4,16 @@ import java.util.Random;
 
 class GuessGame {
 
+    private static int maxGuessedNum = 15;
+
     private static void printMessage(String message) {
         System.out.println(message);
     }
     
     public static void main(String[] args) {
-        printMessage("Hello, I guessed number from 1 to 15. Try to guess it!");
+        printMessage(
+            "Hello, I guessed number from 1 to " + maxGuessedNum + ". Try to guess it!"
+        );
         int secretNum = new Random().nextInt(15) + 1;
         int triesLeft = 5;
         while (true) {
