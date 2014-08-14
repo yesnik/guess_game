@@ -14,7 +14,7 @@ class GuessGame {
         printMessage(
             "Hello, I guessed number from 1 to " + maxGuessedNum + ". Try to guess it!"
         );
-        int secretNum = new Random().nextInt(15) + 1;
+        int secretNum = new Random().nextInt(maxGuessedNum) + 1;
         int triesLeft = 5;
         while (true) {
             if (triesLeft < 1) {
